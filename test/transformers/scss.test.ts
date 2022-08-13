@@ -39,9 +39,9 @@ describe('transformer - scss', () => {
     const template = `<style lang="scss">@import "fixtures/style.scss";</style>`;
     const opts = sveltePreprocess({
       scss: {
-        // we force the node-sass implementation here because of
+        // we force the sass implementation here because of
         // https://github.com/sveltejs/svelte-preprocess/issues/163#issuecomment-639694477
-        implementation: require('node-sass'),
+        implementation: require('sass'),
       },
     });
 
@@ -56,9 +56,9 @@ describe('transformer - scss', () => {
     const template = `<style lang="scss">@import "fixtures/style.scss";</style>`;
     const opts = sveltePreprocess({
       scss: {
-        // we force the node-sass implementation here because of
+        // we force the sass implementation here because of
         // https://github.com/sveltejs/svelte-preprocess/issues/163#issuecomment-639694477
-        implementation: require('node-sass'),
+        implementation: require('sass'),
         renderSync: true,
       },
     });
